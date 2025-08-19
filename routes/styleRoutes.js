@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { saveStyles, getUserStyles } = require('../controllers/styleController');
+const { getStyle, saveStyle } = require('../controllers/styleController');
 
-router.get('/styles', getUserStyles);      // GET /api/styles?userId=1
-router.post('/styles', saveStyles);    // POST { userId, styles }
+// GET style for a user
+router.get('/:userId', getStyle);
+
+// POST or UPDATE style for a user
+router.post('/:userId', saveStyle);
 
 module.exports = router;

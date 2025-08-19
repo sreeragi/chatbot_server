@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // Routes
 const styleRoutes = require('./routes/styleRoutes');
-app.use('/api', styleRoutes);
+app.use('/api/styles', styleRoutes);
 
 const chatRoutes=require('./routes/chatRoutes')
 app.use('/api',chatRoutes)
